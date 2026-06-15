@@ -19,7 +19,9 @@ jobs:
         with:
           node-version: "22.x"
       - run: npm install
+        working-directory: backend
       - run: npm run lint
+        working-directory: backend
 
   test:
     name: Tests Node.js ${{ matrix.node-version }}
@@ -35,11 +37,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
+        working-directory: backend
       - run: npm run test:ci
+        working-directory: backend
       - name: Upload du rapport de couverture
         if: matrix.node-version == '22.x'
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: coverage/
+          path: backend/coverage/
           retention-days: 30
