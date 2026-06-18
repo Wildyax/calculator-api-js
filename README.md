@@ -62,6 +62,11 @@ docker-compose exec backend npm run test:unit
 docker-compose exec backend npm run test:coverage
 ```
 
+### Exécuter les tests fonctionnels (Playwright E2E)
+```bash
+docker-compose exec backend npm run test:e2e
+```
+
 ## 🔌 API Endpoints
 
 ### Calculer
