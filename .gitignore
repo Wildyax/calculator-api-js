@@ -12,3 +12,7 @@ backend-java/target/
 backend-java/build/
 backend-java/bin/
 *.class
+
+# Python
+backend_python/**/__pycache__
+backend_python/**/.pytest_cache

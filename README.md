@@ -67,7 +67,7 @@ docker-compose exec backend npm run test:coverage
 docker-compose exec backend npm run test:e2e
 ```
 
-## 🔌 API Endpoints
+##    API Endpoints
 
 ### Calculer
 **GET** `/calculate?operation={op}&a={numA}&b={numB}`
@@ -78,3 +78,10 @@ docker-compose exec backend npm run test:e2e
     - `b` : Nombre
 - **Exemple** : `http://localhost:3000/calculate?operation=add&a=10&b=5`
 - **Réponse** : `{ "operation": "add", "a": 10, "b": 5, "result": 15 }`
+
+##    Python
+
+### Exécuter les tests unitaires
+```bash
+docker compose exec -w /app/src backend python3 -m pytest ../tests/ -v
+```

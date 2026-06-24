@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend_python
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend_python:/app
+    networks:
+      - calculator-network
+    environment:
+      - FLASK_ENV=development
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - calculator-network
+
+networks:
+  calculator-network:
+    driver: bridge
