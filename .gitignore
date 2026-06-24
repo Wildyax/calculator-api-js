@@ -11,6 +11,11 @@ test-results/
 backend-java/target/
 backend-java/build/
 backend-java/bin/
+backend-java/out/
+backend-java/out-test/
+backend-java/app.jar
+backend-java/reports/
+backend-java/junit*.jar
 *.class
 
 # Python
