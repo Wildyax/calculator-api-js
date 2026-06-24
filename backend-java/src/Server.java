@@ -69,7 +69,7 @@ public class Server {
             a = Double.parseDouble(aRaw);
             b = Double.parseDouble(bRaw);
         } catch (NumberFormatException e) {
-            sendJson(exchange, 400, "{\"error\":\"Les paramètres a et b ne sont ps des nombres\"}");
+            sendJson(exchange, 400, "{\"error\":\"Les paramètres a et b doivent être des nombres.\"}");
             return;
         }
 
@@ -145,6 +145,7 @@ class Calculator {
 
     double divide(double a, double b) {
         if (b == 0) {
+            System.out.println("Division par 0 impossible");
             throw new ArithmeticException("Division par zéro impossible");
         }
         System.out.println("Opération DIVIDE : " + a + "/" + b + "=" + (a / b) + ".");

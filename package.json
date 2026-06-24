@@ -7,7 +7,7 @@
     "start": "docker compose up --build",
     "start:node": "docker compose up --build",
     "start:java": "docker compose -f docker-compose.java.yml up --build",
-    "stop:node": "docker compose down",
-    "stop:java": "docker compose -f docker-compose.java.yml down"
+    "test:java": "docker build --target test -t calc-java-tests backend-java && docker run --rm calc-java-tests",
+    "start:test": "npm run test:java && npm run start:java"
   }
 }
