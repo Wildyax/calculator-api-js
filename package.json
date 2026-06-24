@@ -1,0 +1,13 @@
+{
+  "name": "calculator-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calculatrice multi-langages (Node, Java, PHP, Python) — lanceurs Docker",
+  "scripts": {
+    "start": "docker compose up --build",
+    "start:node": "docker compose up --build",
+    "start:java": "docker compose -f docker-compose.java.yml up --build",
+    "stop:node": "docker compose down",
+    "stop:java": "docker compose -f docker-compose.java.yml down"
+  }
+}
