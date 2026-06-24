@@ -1,2 +1,14 @@
+# Node
 /node_modules/
 /backend/node_modules/*
+
+# Rapports générés (ne pas committer)
+coverage/
+playwright-report/
+test-results/
+
+# Java
+backend-java/target/
+backend-java/build/
+backend-java/bin/
+*.class
